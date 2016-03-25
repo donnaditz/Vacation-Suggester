@@ -15,7 +15,7 @@
         <div class="col-xs-3">
           <img src="http://govisithawaii.trackur.netdna-cdn.com/wp-content/uploads/2013/04/8530885813_89e1d80ee7_z.jpg" alt= "Photo of Wailea Grand Resort: ">
         </div>
-        <div class="col-xs-3">
+                <div class="col-xs-3">
           <img src="https://www.thefamilytravelfiles.com/images/articles/018snow.jpg" alt= "Photo of Breckenridge, CO">
         </div>
         <div class="col-xs-3">
@@ -24,7 +24,6 @@
         <div class="col-xs-3">
           <img src="http://bendwild.com/wp-content/uploads/2009/09/bt24.jpg" alt= "Photo of Bend Summer">
         </div>
-
       </div>
       <h3>Select from below the activities you enjoy while on vacation and we will suggest a destination for you!</h3>
 
@@ -32,7 +31,7 @@
         <div class="radio">
           <label>
             <input type="radio" name="vacation" value="vacation1" checked>
-            I like big swimming pools, and fun activities for the family.
+            I like  a beach resort with big swimming pools, and fun activities for the family.
           </label>
         </div>
         <div class="radio">
@@ -50,19 +49,47 @@
         <div class="radio">
           <label>
             <input type="radio" name="vacation" value="vacation4" checked>
-            I like skiing, snowboarding, winter lodges.
+            I like skiing, snowboarding, and other winter activities.
           </label>
         </div>
         <div class="radio">
           <label>
             <input type="radio" name="vacation" value="vacation5" checked>
-            I like hiking, kayaking, cycling.
+            I like hiking, kayaking or cycling.
           </label>
-        </div>
-
-        <button type="submit" class="btn btn-success">We Suggest</button>
+        </div><button type="submit" class="btn btn-success">We Suggest</button>
       </form>
 
         <h3 id="destination-result"></h3>
-
     </div>
+
+    <div class="container">
+        <h1>Vacation Selector</h1>
+        <h4>Where should you travel to for the activities you enjoy? Coming up with vacation destination ideas is not always easy. Answer the set of questions that asks about an activity you enjoy to receive suggestions on where to travel:</h4>
+
+        <form id="vacation-selector">
+          <div class="row">
+            <div class="col-xs-6">
+              <label for="question1">Do you like to ski?</label>
+              <select id="question1" class="form-control">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+
+            <div class="col-xs-6">
+              <label for="question2">Do you like big resorts?</label>
+              <select id="question2" class="form-control">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+
+          </div>
+            <button type="submit" class="btn btn-danger">Find my destination</button>
+        </form>
+
+      <div id="destination">
+        <h3><span id="vacation-answer"></span></h3>
+      </div>
+  </div>

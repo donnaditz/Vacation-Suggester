@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+// Radi butto Vacation Suggester
 $("form#about-you").submit(function(event){
     var destination = $("input:radio[name=vacation]:checked").val();
 
@@ -16,10 +16,33 @@ $("form#about-you").submit(function(event){
       $("#destination-result").empty().append("You should travel to Breckenridge, Colorado, a town at the base of the Rocky Mountains Tenmile Range. It is prennially one of the most visited ski resorts in the western hemisphere.");
 
     } else  {
-      $("#destination-result").empty().append("You should travel to Bend, Oregon for some of the most spectacular and beautiful hikes in the country, if not the world. Several cycling routes within the Three Sisters Scenic Bikeway represent the most scenic road cycling routes in Central Oregon.");
+      $("#destination-result").empty().append("You should travel to Bend, Oregon for some of the most spectacular and beautiful hikes in the country, if not the world. Several cycling routes within the Three Sisters Scenic Bikeway represent the most scenic road cycling routes in Central Oregon.Nothing compares to the crystal clear rivers and lakes for kayaking and canoeing");
 
     }
 
     event.preventDefault();
   });
+
+    $("form#vacation-selector").submit(function(event){
+      var answer1 = $("select#question1").val();
+      var answer2 = $("select#question2").val();
+
+      if (answer1 === "yes" && answer2 === "yes") {
+
+        $("#vacation-answer").empty().append(" Visit Vail Resort, CO");
+        $("#vacation-result").show();
+
+      } else if (answer1 === "yes" && answer2 === "no") {
+
+        $("#vacation-answer").empty().append(" Visit Bachelor Mountain, OR");
+        $("#vacation-result").show();
+
+      } else if (answer1 === "no") {
+        $("#vacation-answer").empty().append("Consider a vacation to the beach instead!");
+        $("#vacation-result").show();
+      }
+        event.preventDefault();
+
+  });
+
 });
